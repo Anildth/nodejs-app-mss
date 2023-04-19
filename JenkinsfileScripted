@@ -1,10 +1,5 @@
 node
-{
- 
-  stage("CheckOutCodeGit")
-  {
-   git branch: ''git credentialsId: 'git ', url: 'https://github.com/Anildth/nodejs-app-mss.git'
- }
+
  
  stage("Build")
  {
