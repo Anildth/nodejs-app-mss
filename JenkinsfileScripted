@@ -1,23 +1,17 @@
-pipeline {
-  agent any
-    
-  tools {nodejs "NodeJS 20.0.0"}
-    
-  stages {
-     
-    stage('Build') {
-      steps {
-        sh 'npm install'
-         sh '<<Build Command>>'
-      }
-    }  
-    
-            
-    stage('Test') {
-      steps {
-        sh 'node test'
-      }
+node{
+
+ 
+ stage("CheckOutCodeGit"){
+ git 'https://github.com/Anildth/nodejs-app-mss.git'
+ }
+ 
+ stage("Build")
+ {
+ sh 'npm install'
     }
-  }
-} 
+ stage("ExcuteSonarQubeReport")
+ {
+ sh" npm install"
+ }
+ } 
 
