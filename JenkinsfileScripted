@@ -1,20 +1,23 @@
 pipeline {
   agent any
-  
-  tools {nodejs "Nodejs"}
-  
+    
+  tools {nodejs "node"}
+    
   stages {
-    stage ('Build') {
+     
+    stage('Build') {
       steps {
         sh 'npm install'
+         sh '<<Build Command>>'
+      }
+    }  
+    
+            
+    stage('Test') {
+      steps {
+        sh 'node test'
       }
     }
-    stage('ExecuteSonarQubeReport'){
-      steps{
-        sh  'npm run sonar'
-   }
-   }
-   
-    }
- }  
+  }
+} 
 
