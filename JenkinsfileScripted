@@ -15,6 +15,6 @@ node{
  }
  stage('UploadArtifactsIntoNexus')
  {
- sh  "mvn clean deploy"
+ sh  "npm publish"
   }
   }
