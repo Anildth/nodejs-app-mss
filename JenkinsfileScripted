@@ -19,6 +19,6 @@ node{
   }
  stage('UploadArtifactsIntoNexus')
  {
- sh  "npm publish"
+ sh  'npm publish'
   }
   }
