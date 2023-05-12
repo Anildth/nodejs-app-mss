@@ -1,5 +1,5 @@
 node{
-
+properties([pipelineTriggers([pollSCM('* * * * *')])])
  
  stage("CheckOutCodeGit"){
  git 'https://github.com/Anildth/nodejs-app-mss.git'
