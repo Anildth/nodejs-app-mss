@@ -1,12 +1,12 @@
 const sonarqubeScanner = require('sonarqube-scanner');
 
 sonarqubeScanner({
-  serverUrl: 'http://192.168.30.45:9000/',
+  serverUrl: 'https://sonarqube-notifcation-hub-devops.apps.cluster-xs46k.xs46k.sandbox961.opentlc.com/account/security/',
        options : {
 	    'sonar.projectDescription': 'This is a Node JS application',
 	    'sonar.projectName': 'Node JS Application - Sample',
 	    'sonar.projectKey':'NodeJsapp',
-	    'sonar.login': 'squ_24ba196380c3c0a862953afb095cb762977be498',
+	    'sonar.login': 'sqa_001ff1de5749d807047ab424508545333b1a077c',
 	    //'sonar.login': 'admin',
 	    //'sonar.password': 'admin',
             'sonar.projectVersion':'1.0',
