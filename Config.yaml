@@ -5,10 +5,6 @@ metadata:
     app.kubernetes.io/name: node-js
   name: node-js
 spec:
-  output:
-    to:
-      kind: DockerImage
-      name: node-js:latest
   source:
     type: Git
     git:
