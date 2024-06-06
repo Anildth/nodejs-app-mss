@@ -2,13 +2,13 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   labels:
-    app.kubernetes.io/name: SelfService-PortalUI-TemplateManagement
-  name: SelfService-PortalUI-TemplateManagement
+    app.kubernetes.io/name: node-js
+  name: node-js
 spec:
   output:
     to:
       kind: DockerImage
-      name: SelfService-PortalUI-TemplateManagement:latest
+      name: node-js:latest
   source:
     type: Git
     git:
