@@ -9,6 +9,10 @@ spec:
     to:
       kind: DockerImage
       name: node-js:latest
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/Anildth/nodejs-app-mss.git'
   strategy:
     type: Docker
     dockerStrategy:
