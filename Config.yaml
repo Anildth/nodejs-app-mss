@@ -1,10 +1,14 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: docker-build
-  namespace: core-devops
   labels:
-    name: docker-build
+    app.kubernetes.io/name: SelfService-PortalUI-TemplateManagement
+  name: SelfService-PortalUI-TemplateManagement
+spec:
+  output:
+    to:
+      kind: DockerImage
+      name: SelfService-PortalUI-TemplateManagement:latest
   source:
     type: Git
     git:
@@ -13,7 +17,3 @@ metadata:
     type: Docker
     dockerStrategy:
       dockerfilePath: Dockerfile
-  output:
-    to:
-      kind: ImageStreamTag
-      name: node-js:latest'
