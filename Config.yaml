@@ -1,0 +1,19 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: docker-build
+  namespace: core-devops
+  labels:
+    name: docker-build
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/Anildth/nodejs-app-mss.git'
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+  output:
+    to:
+      kind: ImageStreamTag
+      name: node-js:latest'
